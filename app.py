@@ -10,7 +10,7 @@ st.title("🌸 Iris Flower Prediction Using Machine Learning")
 st.subheader("Use the sliders below to enter flower measurements and predict the species.")
 
 # Load trained model
-model = joblib.load("model/iris_model.pkl")
+model = joblib.load("iris_model.pkl")
 
 # Create two columns
 col1, col2 = st.columns(2)
@@ -43,3 +43,4 @@ with col2:
         prediction = model.predict(input_data)
 
         st.success(f"🌼 Predicted Iris Species: **{prediction[0]}**")
+
